@@ -1,8 +1,7 @@
 import React from 'react';
 
 const Search = ({ placeholder, searchData }) => {
-  // searchData prop is received but not used in this mock for simplicity
-  return (
+  return(
     <div className="relative w-full max-w-md">
       <input
         type="text"
