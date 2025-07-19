@@ -7,12 +7,12 @@ import Search from '../Search/search';
   return (
     <nav
       style={{
-        backgroundColor: '#4CAF50',
+        backgroundColor: '#34C94B',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
         padding: '10px 20px',
-        borderRadius: '8px',
+        height: '76px',
       }}
       className="w-full" 
     >
@@ -20,7 +20,7 @@ import Search from '../Search/search';
 
       <div className="flex-grow flex justify-center mx-4"> 
         <Search
-          placeholder="Search a song of your choice"
+          placeholder="Search an album of your choice"
           searchData={searchData}
         />
       </div>

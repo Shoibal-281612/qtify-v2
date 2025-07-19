@@ -1,9 +1,20 @@
 .hero {
-  background-color: var(--color-black);
+  background-color: #121212; /* Make sure --color-black is defined globally */
   height: 270px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 30px;
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Centers items vertically */
+  /* Remove text-align: center; from here */
+  gap: 30px; /* Space between text and image */
+  color: #fff; /* Make all text inside the hero banner white */
 }
+
+/* Optional: Add styles for the text container or H1s directly if you need specific font sizes */
+.heroTextContent h1 {
+  font-size: 40px; /* Adjust as needed to match the screenshot */
+  font-weight: 600; /* Adjust if needed */
+  margin: 0; /* Remove default h1 margins if they cause unwanted spacing */
+  line-height: 1.2; /* Adjust line height for closer text */
+}
+
+/* Add any other specific styles for hero sections if necessary */
