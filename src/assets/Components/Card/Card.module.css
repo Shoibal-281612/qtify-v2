@@ -1,0 +1,82 @@
+
+.card {
+    width: 150px; /* Adjust as needed for your grid layout */
+    border-radius: 10px; /* Apply to the whole card for rounded corners */
+    overflow: hidden; /* Crucial to ensure content respects border-radius */
+    background-color: #121212; /* Background for text sections */
+    color: #ffff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow for depth */
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    /* Maintain aspect ratio for the image part. The image in the example looks
+       close to square or slightly taller (e.g., 1:1 or 1:1.2). */
+    padding-bottom: 100%; /* Makes the container square (1:1 aspect ratio) */
+    overflow: hidden;
+    /* Apply top border-radius here as the image is the top element */
+    border-radius: 10px 10px 0 0;
+}
+
+.albumImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover; /* Ensures image covers the area without distortion */
+    /* No border-radius here, it's applied to the .imageContainer */
+}
+
+/* Optional: If that small green circle is a play button/icon */
+.playIcon {
+    position: absolute;
+    top: 8px; /* Adjust vertical position */
+    left: 8px; /* Adjust horizontal position */
+    width: 24px; /* Size of the icon */
+    height: 24px;
+    background-color: var(--color-primary-green); /* Green color from Figma */
+    border-radius: 50%; /* Make it a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Ensure it's on top of the image */
+    /* You might put an SVG icon inside this div */
+}
+
+.cardTitleSection {
+    background-color: var(--color-black); /* Black background for the title text */
+    padding: 8px 10px; /* Padding around the title */
+    color: #ffff;
+}
+
+.albumTitle {
+    margin: 0; /* Remove default paragraph margins */
+    font-size: 14px; /* Adjust font size for title */
+    font-weight: 600; /* Make it bold as per design */
+    white-space: nowrap; /* Prevent title from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis if title overflows */
+}
+
+.cardFollowsSection {
+    background-color: #ffff; /* Black background for the chip */
+    padding: 0px 10px 8px; /* Padding for the section, specifically at the bottom */
+    display: flex; /* To align the chip */
+    align-items: center; /* Vertically align the chip */
+    min-height: 40px; /* Ensure sufficient space for the chip */
+}
+
+.followsChip {
+    background-color:#121212 !important; /* White background for chip */
+    color: var(--color-black) !important; /* Black text for chip */
+    font-size: 10px !important; /* Adjust font size */
+    height: 20px !important; /* Adjust height */
+    padding: 0 6px !important; /* Adjust padding */
+    border-radius: 10px !important; /* Rounded corners */
+    line-height: 1; /* Helps with vertical alignment of text within chip */
+    cursor: default; /* Not clickable like a button, so cursor doesn't change */
+}
