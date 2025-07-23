@@ -1,0 +1,26 @@
+/* src/components/Carousel/RightNavButton/RightNavButton.module.css */
+
+.rightnavButton {
+   position: absolute;
+    top: 50%;
+    right: 10px; /* This value controls the overlap */
+    transform: translateY(-50%);
+    z-index: 10;
+    background: #34C94B; /* Green background */
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%; /* Circular shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    width: 36px; /* Explicit width */
+    height: 36px; /* Explicit height */
+}
+
+.rightnavButton svg {
+    width: 24px;
+    height: 24px;
+    fill: white !important;
+}

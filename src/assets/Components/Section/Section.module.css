@@ -1,6 +1,7 @@
 .section {
-    padding: 20px; /* Adjust padding as per Figma */
+    /* Removed padding here */
     background-color: #121212;
+    /* This section is primarily a container for the header and the content area (grid/carousel) */
 }
 
 .header {
@@ -8,46 +9,44 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px; /* Vertical spacing between text and grid */
+    padding: 0 20px; /* <--- Apply horizontal padding here, matching your desired 20px */
 }
 
 .title {
     margin: 0;
-    font-size: 24px; /* Adjust font size as needed */
+    font-size: 24px;
     font-weight: 600;
     color: #ffff;
-    
 }
 
 .collapseButton {
-    background: none;
-    border: none;
+    background: none; /* No background */
+    border: none; /* No border */
     color: #34C94B; /* Green color from Figma */
     font-size: 16px; /* Adjust font size as needed */
     cursor: pointer;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 5px 10px; /* Some padding for clickable area */
+    border-radius: 5px; /* Slightly rounded corners */
     transition: background-color 0.2s ease;
-    font-family: 'Popins', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Corrected typo: 'Poppins' */
 }
 
 .collapseButton:hover {
     background-color: rgba(52, 201, 75, 0.1); /* Slight background on hover */
 }
 
+
 .gridContainer {
     display: grid;
-    /* Adjust grid-template-columns for responsiveness or fixed number of columns */
-    /* Example: repeat(auto-fill, minmax(150px, 1fr)) for responsive columns */
-    /* For a fixed number, e.g., 6 columns: repeat(6, 1fr) */
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px; /* Horizontal and vertical spacing between cards */
     justify-content: start; /* Align items to the start of the grid */
+    padding: 0 20px; /* <--- Apply horizontal padding here for the grid */
 }
 
-/* Optional: Styles for loading and error */
 .loading, .error {
     text-align: center;
     padding: 20px;
     font-size: 18px;
-    color: var(--color-white);
+    color: var(--color-white); /* Assuming --color-white is defined elsewhere, or use #FFFFFF */
 }

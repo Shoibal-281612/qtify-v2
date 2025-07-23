@@ -1,0 +1,26 @@
+/* src/components/Carousel/LeftNavButton/LeftNavButton.module.css */
+
+.leftnavButton {
+    position: absolute;
+    top: 50%; /* Vertically center */
+    left: 10px; /* <--- Adjust this value. Pushes it 10px from the left edge of the .carouselContainer's content */
+    transform: translateY(-50%); /* Keeps it perfectly centered vertically */
+    z-index: 10;
+    background: #34C94B; /* <--- CHANGE: Green background color */
+    border: none;
+    cursor: pointer;
+    padding: 8px; /* Adjust as per your SVG size and desired button size */
+    border-radius: 50%; /* Make it circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    width: 36px; /* Example size for a circular button */
+    height: 36px; /* Example size for a circular button */
+}
+
+.leftnavButton svg {
+    width: 24px; /* Size of the SVG icon */
+    height: 24px;
+    fill: white; /* Color of the arrow */
+}

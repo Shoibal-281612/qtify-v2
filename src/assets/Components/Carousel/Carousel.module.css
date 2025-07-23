@@ -1,0 +1,11 @@
+.carouselContainer {
+    position: relative;
+    padding: 0 40px;
+}
+
+/* Hide default Swiper navigation buttons if they conflict with custom ones */
+.carouselContainer :global(.swiper-button-next),
+.carouselContainer :global(.swiper-button-prev) {
+    display: none !important;
+    width: auto !important;
+}
